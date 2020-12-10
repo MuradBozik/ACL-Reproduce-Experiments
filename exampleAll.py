@@ -47,10 +47,7 @@ tsp = {'slices-tsp-rue-1000-3000':3600}
 sat = {'slices-circuit-fuzz':600,'slices-BMC08':600}
 mip = {'slices-cls':10000,'slices-regions200':10000}
 
-scenarios = {'scenarios/EAX':tsp,'scenarios/LKH':tsp,'scenarios/CaDiCaL':sat,'scenarios/lingeling':sat,'scenarios/cryptominisat':sat,'scenarios/CPLEX':mip}
-
-mip = {'slices-regions200':10000}
-scenarios = {'scenarios/CPLEX':mip}
+scenarios = {'scenarios/LKH':tsp,'scenarios/EAX':tsp,'scenarios/CaDiCaL':sat,'scenarios/lingeling':sat,'scenarios/cryptominisat':sat,'scenarios/CPLEX':mip}
 
 
 for scenario in scenarios.keys():

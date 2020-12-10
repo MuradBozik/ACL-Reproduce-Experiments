@@ -11,11 +11,11 @@ tsp = {'slices-tsp-rue-1000-3000':3600}
 sat = {'slices-circuit-fuzz':600,'slices-BMC08':600}
 mip = {'slices-cls':10000,'slices-regions200':10000}
 
-scenarios = {'scenarios/EAX':tsp,'scenarios/LKH':tsp,'scenarios/CaDiCaL':sat,'scenarios/lingeling':sat,'scenarios/cryptominisat':sat,'scenarios/CPLEX':mip}
+scenarios = {'scenarios/LKH':tsp,'scenarios/EAX':tsp,'scenarios/CaDiCaL':sat,'scenarios/lingeling':sat,'scenarios/cryptominisat':sat,'scenarios/CPLEX':mip}
 
 order = ['Parameter', 'Interesting', 'Unimodal', 'Convex', 'Trivially Convex', '% Instances Interesting', '% Instances Unimodal', '% Instances Convex', '% Instances Trivially Convex', 'Average number of modes per instance', 'Fitness Distance Correlation (Median)', 'Fitness Distance Correlation (Q2.5)', 'Fitness Distance Correlation (Q97.5)', 'Average Instance Fitness Distance Correlation (Median)', 'Average Instance Fitness Distance Correlation (Q2.5)', 'Average Instance Fitness Distance Correlation (Q97.5)']
 
-with open('Parameter-Statistics-All.csv','w') as f_out:
+with open('Parameter-Statistics-All-new.csv', 'w') as f_out:
   #data summary
   stats = []
   interestingStats = []
@@ -54,7 +54,7 @@ with open('Parameter-Statistics-All.csv','w') as f_out:
             if(interesting):
               interestingStats[i].append(items[i])
 
-with open('Parameter-Statistics-Summary.txt','w') as f_out:
+with open('Parameter-Statistics-Summary-new.txt', 'w') as f_out:
   f_out.write('#Statistic: all (interesting)\n')
   for i in range(0,len(order)):
     if(type(stats[i][0]) is int):
