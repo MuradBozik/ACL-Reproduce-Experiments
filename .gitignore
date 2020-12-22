@@ -154,3 +154,5 @@ dmypy.json
 cython_debug/
 
 /scenarios
+!/scenarios/EAX/slices-tsp-rue-1000-3000/data
+!/scenarios/EAX/slices-tsp-rue-1000-3000/configs.csv
